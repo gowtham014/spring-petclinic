@@ -9,7 +9,8 @@ pipeline {
         }
         stage('build image') {
             steps{
-                sh"docker image build -t spc:1.0 ."
+                sh "docker info",
+                sh "docker image build -t spc:1.0 ."
             }
         }
     }
